@@ -1793,6 +1793,7 @@ import MenuSetup from './components/admin/MenuSetup';
 import CategorySetup from './components/admin/CategorySetup';
 import ManageOrders from './components/admin/ManageOrders';
 import OrderAnalytics from './components/admin/OrderAnalytics';
+import AdminDashboard from './components/AdminDashboard.jsx';
 
 const App = () => {
   return (
@@ -1800,6 +1801,8 @@ const App = () => {
       <Routes>
         {/* Customer Facing App */}
         <Route path="/:restaurantId/:table" element={<CustomerApp />} />
+        <Route path="/check" element={<AdminDashboard />} />
+
         <Route path="/" element={<Navigate to="/1/1" />} />
 
         {/* Admin Dashboard */}
